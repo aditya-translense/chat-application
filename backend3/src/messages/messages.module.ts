@@ -6,3 +6,4 @@ import { MessagesGateway } from './messages.gateway';
   providers: [MessagesGateway, MessagesService],
 })
 export class MessagesModule {}
+console.log("this is messages module")
