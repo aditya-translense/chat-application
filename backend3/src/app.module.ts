@@ -1,11 +1,14 @@
  // module for chat app
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
+import {ConfigModule} from '@nestjs/config'
 import { MessagesModule } from './messages/messages.module';
 import { UserModule } from 'users/user.module';
 
 @Module({
-  imports: [UserModule,MessagesModule],
+  imports: [ConfigModule.forRoot({
+    envFilePath:'.env',
+    isGlobal:true
+  }),UserModule,MessagesModule],
 
 })
 

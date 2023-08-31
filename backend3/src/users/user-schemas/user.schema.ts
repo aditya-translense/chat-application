@@ -1,6 +1,6 @@
-import { Schema } from "mongoose";
+// import { Schema } from "mongoose";
 
-@new Schema()
-class User{
+// @new Schema()
+// class User{
     
-}
+// }
