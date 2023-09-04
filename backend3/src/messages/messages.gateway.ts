@@ -22,6 +22,7 @@ export class MessagesGateway {
     const message=await this.messagesService.create(createMessageDto, client.id);
     console.log("returned message",message)
     //emiting message to all the users
+    console.log("this is the returned message",message)
     this.server.emit('message',message)
     return message;
     
