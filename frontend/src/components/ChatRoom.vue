@@ -1,12 +1,12 @@
 <template>
     <div class="chat-wrapper">
         <p>Chat room</p>
-        <p>Welcome {{ userName }}</p>
+        <p>Welcome {{ userName }},Type your messages here</p>
       <div v-for="message in messages" :key="message.id">
         {{ message.name }}: {{ message.message }}
       </div>
-      <input class="input-box" v-model="newMessage" />
-      <button type="submit" @click="sendMessage">Send</button>
+      <input class="input-box" v-model="newMessage" placeholder="Enter your message"/>
+      <button type="submit" @click="sendMessage" >Send me</button>
     </div>
   </template>
   
@@ -68,7 +68,9 @@
 
   <style scoped>
    .chat-wrapper{
-     border:2px solid red;
+     background-color: rgb(211, 198, 184);
+     padding:20px;
+     padding-left: 40px;
      height: 70vh;
    }
 

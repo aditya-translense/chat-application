@@ -17,7 +17,7 @@ import { JwtStrategy } from './jwt.strategy';
     secret:"aditya is a good ",
     signOptions:{expiresIn:'3d'}
   }),
-  MongooseModule.forRoot("mongodb://localhost:27017/chat-db")
+  MongooseModule.forRoot("mongodb+srv://adityasolankias2402:adityasolankias2402@chat-db.jjntr9f.mongodb.net/chat-db")
   ,MongooseModule.forFeature([{name:'User',schema:userSchema},{name:'UserAuth',schema:userAuthentication}])],
   controllers:[UserController],
   providers:[UserService,JwtStrategy]

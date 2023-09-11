@@ -38,12 +38,12 @@ export class MessagesGateway {
     
   }
 
-  @SubscribeMessage('join')
-  joinRoom(@MessageBody('name') name:string,@ConnectedSocket() client:Socket){
-    //handler for accepting users
-     return this.messagesService.identify(name,client.id)
+  // @SubscribeMessage('join')
+  // joinRoom(@MessageBody('name') name:string,@ConnectedSocket() client:Socket){
+  //   //handler for accepting users
+  //    return this.messagesService.identify(name,client.id)
      
-  }
+  // }
 
   @SubscribeMessage('typing')
   async typing(@MessageBody('isTyping') isTyping:boolean,@ConnectedSocket() client:Socket){
